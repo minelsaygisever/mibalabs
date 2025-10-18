@@ -1,0 +1,43 @@
+/* src/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global helpers */
+html { scroll-behavior: smooth; }            /* smooth scroll */
+::-webkit-scrollbar { display: none; }
+
+* { font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-effect { background: rgba(255,255,255,.1); backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.2); }
+.glass-strong { background: rgba(255,255,255,.6) !important;
+  border-color: rgba(255,255,255,.35) !important; backdrop-filter: blur(12px) !important; }
+
+.organic-shape-1 {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+.organic-shape-2 {
+  border-radius: 70% 30% 50% 50% / 40% 60% 40% 60%;
+}
+.organic-shape-3 {
+  border-radius: 50% 50% 40% 60% / 60% 50% 50% 40%;
+}
+.organic-shape-4 {
+  border-radius: 55% 45% 60% 40% / 40% 55% 45% 60%;
+}
+
+.scale-hover { transition: transform .3s ease; }
+.scale-hover:hover { transform: scale(1.05); }
+.glow-purple { box-shadow: 0 0 30px rgba(124, 58, 237, .3); }
+.text-shadow { text-shadow: 0 2px 4px rgba(0,0,0,.1); }
