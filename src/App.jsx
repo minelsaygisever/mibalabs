@@ -1,11 +1,17 @@
+// src/App.jsx
+import Navbar from "./components/Navbar";
+import Hero from "./sections/Hero";
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <h1>Mibalabs</h1>
-      <p>Soon...</p>
+    <div className="bg-white">
+      <Navbar />
+      <main>
+        <Hero />
+        <section id="apps" className="py-24" />
+        <section id="about" className="py-24" />
+        <section id="contact" className="py-24" />
+      </main>
     </div>
-  )
+  );
 }
-
-export default App
