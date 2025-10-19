@@ -1,6 +1,8 @@
 // src/App.jsx
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
+import FeaturedApp from './sections/FeaturedApp';
+import WhatWeDo from './sections/WhatWeDo';
 
 export default function App() {
   return (
@@ -8,8 +10,9 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <section id="apps" className="py-24" />
-        <section id="about" className="py-24" />
+        <FeaturedApp />
+        <WhatWeDo />
+        
         <section id="contact" className="py-24" />
       </main>
     </div>
