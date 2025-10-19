@@ -41,7 +41,7 @@ const FounderCard = ({
         </div>
 
         
-        <div className="absolute inset-0 bg-white rounded-full shadow-lg" />
+        <div className="absolute inset-0 bg-white opacity-40 rounded-full shadow-lg" />
 
         <img
             src={image}

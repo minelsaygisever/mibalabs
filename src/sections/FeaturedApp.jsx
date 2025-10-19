@@ -29,7 +29,7 @@ const FeatureItem = ({ icon, title, subtitle }) => (
 export default function FeaturedApp() {
     const appScreens = [AppScreen1, AppScreen2, AppScreen3];
   return (
-    <section id="apps" className="py-24 bg-white">
+    <section id="apps" className="py-24 bg-white overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-16 items-center">
         
