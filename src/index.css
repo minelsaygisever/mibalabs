@@ -51,7 +51,6 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1 !important;
 }
 
-/* Swiper'ın eklediği ekstra gölge katmanlarını tamamen gizle */
 .swiper-slide-shadow,
 .swiper-slide-shadow-left,
 .swiper-slide-shadow-right,
@@ -62,12 +61,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .swiper-slide:not(.swiper-slide-active) img {
-  filter: blur(1px); /* Blur seviyesini buradan ayarla */
-  transition: filter 0.3s ease-out; /* Yumuşak geçiş için */
+  filter: blur(1px);
+  transition: filter 0.3s ease-out; 
 }
 
-/* Aktif slaytın blur'unu kaldır (zaten aktif olmayana uyguladık ama emin olmak için) */
 .swiper-slide-active img {
-  filter: blur(0px); /* Aktif slaytta blur olmasın */
-  transition: filter 0.3s ease-out; /* Yumuşak geçiş için */
+  filter: blur(0px);
+  transition: filter 0.3s ease-out;
 }

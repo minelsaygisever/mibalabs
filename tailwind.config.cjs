@@ -23,15 +23,6 @@ module.exports = {
           '50%': { transform: 'translate(0, 0) scale(1)' },
           '75%': { transform: 'translate(-20px, 30px) scale(0.97)' },
         },
-      },
-      
-      animation: {
-        'float': 'float 8s ease-in-out infinite',         // 'animate-float'
-        'float-slow': 'float 12s ease-in-out infinite', // 'animate-float-slow'
-        'float-fast': 'float 6s ease-in-out infinite',  // 'animate-float-fast'
-      },
-
-      keyframes: {
         'infinite-scroll': {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
@@ -39,8 +30,13 @@ module.exports = {
       },
       
       animation: {
+        'float': 'float 8s ease-in-out infinite',         // 'animate-float'
+        'float-slow': 'float 12s ease-in-out infinite', // 'animate-float-slow'
+        'float-fast': 'float 6s ease-in-out infinite',  // 'animate-float-fast'
         'infinite-scroll': 'infinite-scroll 15s linear infinite',
+        'glow': 'glow-pulse 6s ease-in-out infinite',
       },
+      
     },
   },
   plugins: [],

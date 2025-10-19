@@ -3,6 +3,10 @@ import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import FeaturedApp from './sections/FeaturedApp';
 import WhatWeDo from './sections/WhatWeDo';
+import MeetFounders from './sections/MeetFounders';
+import Testimonials from './sections/Testimonials';
+import Contact from './sections/Contact';
+import Footer from './sections/Footer';
 
 export default function App() {
   return (
@@ -12,9 +16,11 @@ export default function App() {
         <Hero />
         <FeaturedApp />
         <WhatWeDo />
-        
-        <section id="contact" className="py-24" />
+        <MeetFounders />
+        <Testimonials />
+        <Contact />
       </main>
+      <Footer />
     </div>
   );
 }
