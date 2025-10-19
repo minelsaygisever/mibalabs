@@ -31,65 +31,9 @@ export default function FeaturedApp() {
   return (
     <section id="apps" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
-        <div className="w-full h-[520px] flex items-center justify-center">
-            <div className="relative w-full max-w-lg h-full rounded-[4rem] overflow-hidden bg-white flex items-center justify-center">
-              <div
-                className="absolute z-0 top-1/2 left-0 -translate-x-1/2 -translate-y-1/2
-                           w-[400px] h-[400px] 
-                           bg-miba-purple/20 rounded-full blur-3xl"
-              />
-              
-              <div
-                className="absolute z-0 top-1/2 right-0 translate-x-1/2 -translate-y-1/2
-                           w-[400px] h-[400px] 
-                           bg-miba-indigo/15 rounded-full blur-3xl" 
-              />
-              
-              <Swiper
-                modules={[EffectCoverflow, Autoplay]}
-                effect="coverflow"
-                loop={true}
-                centeredSlides={true}
-                slidesPerView={'auto'}
-                autoplay={{
-                  delay: 3000,
-                  disableOnInteraction: false,
-                  reverseDirection: true
-                }}
-                allowTouchMove={false}
-                grabCursor={false}
-                coverflowEffect={{
-                  rotate: 0,
-                  stretch: 230,
-                  depth: 100,
-                  modifier: 2.5,
-                  scale: 1,       
-                  slideShadows: false, 
-                }}
-                className="relative z-10 w-full max-w-lg cursor-default" 
-              >
-                {[...appScreens, ...appScreens].map((screen, index) => (
-                  <SwiperSlide 
-                    key={index} 
-                    className="w-72" 
-                  >
-                    <img 
-                      src={screen} 
-                      alt={`App screenshot ${index + 1}`} 
-                      draggable="false"
-                      className="w-full h-auto rounded-3xl select-none"
-                      onDragStart={(e) => e.preventDefault()}
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-        </div>
-
-          {/* Column 2: App Info */}
-          <div className="space-y-8">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-16 items-center">
+        
+          <div className="lg:col-start-2 lg:row-start-1">
             {/* Title and Icon */}
             <div className="flex items-center">
               <img 
@@ -103,7 +47,72 @@ export default function FeaturedApp() {
                 </h2>
               </div>
             </div>
+          </div>
+          
+          <div className="w-full h-auto lg:h-[520px] flex items-center justify-center 
+                          lg:col-start-1 lg:row-start-1 lg:row-span-2">
+            <div className="relative w-full max-w-lg h-full flex items-center justify-center">
+              
+              {/* Left Blob */}
+              <div
+                className="absolute z-0 top-1/2 left-0 -translate-x-1/2 -translate-y-1/2
+                           w-[400px] h-[400px] 
+                           bg-miba-purple/20 rounded-full blur-3xl"
+              />
+              {/* Right Blob */}
+              <div
+                className="absolute z-0 top-1/2 right-0 translate-x-1/2 -translate-y-1/2
+                           w-[400px] h-[400px] 
+                           bg-miba-indigo/15 rounded-full blur-3xl" 
+              />
+              <div className="relative z-10 w-full h-full rounded-[4rem] 
+                          bg-white 
+                          border border-white border-opacity-60 
+                          shadow-lg shadow-gray-200/50 
+                          flex items-center justify-center">
 
+                {/* SWIPER */}
+                <Swiper
+                  modules={[EffectCoverflow, Autoplay]}
+                  effect="coverflow"
+                  coverflowEffect={{
+                    depth: 200,
+                    modifier: 1,
+                    slideShadows: false,
+                  }}
+                  spaceBetween={-30}
+                  loop={true}
+                  centeredSlides={true}
+                  slidesPerView={'auto'}
+                  autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                    reverseDirection: false,
+                  }}
+                  allowTouchMove={false} 
+                  grabCursor={false}
+                  className="w-full max-w-lg cursor-default" 
+                >
+                  {[...appScreens, ...appScreens].map((screen, index) => (
+                    <SwiperSlide 
+                      key={index} 
+                      className="w-72" 
+                    >
+                      <img 
+                        src={screen} 
+                        alt={`App screenshot ${index + 1}`} 
+                        draggable="false" 
+                        className="w-full h-auto rounded-3xl select-none"
+                        onDragStart={(e) => e.preventDefault()}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-8 lg:col-start-2 lg:row-start-2">
             {/* Descrption */}
             <p className="text-lg text-gray-600 leading-relaxed">
               A privacy-first currency converter and savings tracker, live on 
