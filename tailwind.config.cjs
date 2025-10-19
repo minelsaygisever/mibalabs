@@ -30,6 +30,17 @@ module.exports = {
         'float-slow': 'float 12s ease-in-out infinite', // 'animate-float-slow'
         'float-fast': 'float 6s ease-in-out infinite',  // 'animate-float-fast'
       },
+
+      keyframes: {
+        'infinite-scroll': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      
+      animation: {
+        'infinite-scroll': 'infinite-scroll 15s linear infinite',
+      },
     },
   },
   plugins: [],
